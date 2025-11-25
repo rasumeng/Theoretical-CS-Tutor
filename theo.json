@@ -1,0 +1,11 @@
+[
+    {
+        "Question" : "A Non-Deterministic Finite State Machine is a 5 Tuple: Define it",
+        "Answer" : "1. Q is a finite set of states 2. Σ is a finite set called the alpahbet 3. δ : Q x Σ > P(Q) is the transition function 4. q0 ∈ Q is the start state 5. F ⊆ Q is the set of accept states "
+    },
+
+    {
+        "Question" : "A Deterministic Finite State Machine is a 5 Tuple: Define it",
+        "Answer" : "1. Q is a finite set of states 2. Σ os a finite set called the alphabet 3. δ : Q x Σ > Q is the transistion state 4. q0 ∈ is the start function 5. F ⊆ Q is the set of accept states "
+    }
+]
