@@ -1,11 +1,131 @@
 [
     {
-        "Question" : "A Non-Deterministic Finite State Machine is a 5 Tuple: Define it",
-        "Answer" : "1. Q is a finite set of states 2. Σ is a finite set called the alpahbet 3. δ : Q x Σ > P(Q) is the transition function 4. q0 ∈ Q is the start state 5. F ⊆ Q is the set of accept states "
+        "instruction" : "A Non-Deterministic Finite State Machine is a 5 Tuple: Define it",
+        "response" : "1. Q is a finite set of states 2. Σ is a finite set called the alpahbet 3. δ : Q x Σ > P(Q) is the transition function 4. q0 ∈ Q is the start state 5. F ⊆ Q is the set of accept states "
     },
 
     {
-        "Question" : "A Deterministic Finite State Machine is a 5 Tuple: Define it",
-        "Answer" : "1. Q is a finite set of states 2. Σ os a finite set called the alphabet 3. δ : Q x Σ > Q is the transistion state 4. q0 ∈ is the start function 5. F ⊆ Q is the set of accept states "
+        "instruction" : "A Deterministic Finite State Machine is a 5 Tuple: Define it",
+        "response" : "1. Q is a finite set of states 2. Σ os a finite set called the alphabet 3. δ : Q x Σ > Q is the transistion state 4. q0 ∈ is the start function 5. F ⊆ Q is the set of accept states "
+    },
+
+    {
+        "instruction" : "A Context Free Grammar is a 4 tuple: Define it.",
+        "response" : "1. V is a finite set called the variables 2. Σ is a finite set distjoing from V ccalled terminals 3. R is a finite set of rules, with each rule being a variable and a string of variables adn terminals 4. S ∈ V is the start variable "
+    },
+    
+    {
+        "instruction": "A Pushdown Automata (PDA) is a 6 Tuple: Define it.",
+        "response" : "1.  Q is the set of states 2. Σ is the input alphabet 3. Γ is the stack alphabet 4. δ : Q x Σε x Γε -> P(Q x Σε x Γε) is the transition function 5. q0 ∈ Q is the start state 6. F ⊆ is the set of accept states"
+    },
+
+    {
+        "instruction" : "A Turing Machine is a 6 Tuple: Define it.",
+        "response" : "1. Q is a the set of states 2. Σ is the input alphabet not containing the blank symbol 3. Γ is the tape alphabet, where Σ ⊆ Γ and the blank symbol ∈ Γ 4. δ : Q x Γ -> Q x Γ x {L, R} is the transition function 5. q0 ∈ Q is the start state 6. F ⊆ Q is the set of accept states"
+    },
+
+    {
+        "instruction" : "What are Regular Languages Closed Under?",
+        "response" : "1. Union 2. Kleene Star 3. Concatenation 4. Intersection 5. Complementation"
+    },
+
+    {
+        "instruction" : "What are Decidable Turing Machines Closed Under?", 
+        "response" : "1. Union 2. Kleene Star 3. Concatenation 4. Intersection 5. Complement"
+    },
+
+    {
+        "instruction" : "What are Recognizing Turing Machines Closed under?",
+        "response" : " 1. Union 2. Kleene Star 3. Concatentation 4. Intersection"
+    },
+
+    {
+        "instruction" : "What are the 6 conditions for a Regular Expression??",
+        "response" : "1. a for some a in the alphabet Σ 2. ε (the empty string) 3. empty language ∅ 4. (R1 ⋃ R2) where R1 and R2 are regular expressions 5. (R1 ° R2) where R1 and R2 are regular expressions 6. (R1*) where R1 is a regular expression"
+    },
+
+    {
+        "instruction" : "What is Class P Closed Under",
+        "response" : "1. Union 2. Kleene Star 3. Concatenation 4. Intersection 5. Complement"
+    },
+
+    {
+        "instruction" : "Describe CFL closure under union",
+        "response" : " Let L1 and L2 be context free languages Formally Defined, G(L1) = (V1, E, R1, S1} and G(L2) = {V2, E, R2, S2}. To build a union grammar S --> S1 | S2 Formally Defined: G = (V1 ⋃ V2 ⋃ {S}, E, R1 ⋃ R2 ⋃ {S --> S1 | S2}, S) and V1 ∩ V2 = ∅ (are disjoint)"
+    },
+
+    {
+        "instruction" : "Describe CFL closure under Concatenation",
+        "response" : " Let L1 and L2 be context free languages Formally Defined, G(L1) = (V1, E, R1, S1} and G(L2) = {V2, E, R2, S2}. To build a concatenation grammar S --> S1 ° S2 Formally Defined: G = (V1 ⋃ V2 ⋃ {S}, E, R1 ⋃ R2 ⋃ {S --> S1 ° S2}, S) and V1 ∩ V2 = ∅ (are disjoint)"
+    },
+
+    {
+        "instruction" : "Describe CFL clousre under Star",
+        "response" : " Let L1 be a context free language Formally Defined, G(L1) = (V1, E, R1, S1}. To build a star grammar S --> S1 ° S | ε Formally Defined: G = (V1 ⋃ {S}, E, R1 ⋃ {S --> S1 ° S | ε}, S) "
+    },
+
+    {
+        "instruction" : "Describe Deciding TM closure under Union",
+        "response" : "Let L1 and L2 be decidable and TM m1 and M2 decide the respectively. Build M to decide L1 U L2: M = 'On input W 1. Copy w to tape 2 2. Simulate M1 on w using tape 1 if M1 accepts , the accept. 3. Simulate M2 on w using tape 2 if M2 accepts then accept, if M2 rejects, then reject.'"
+    },
+
+    {
+        "instruction" : "Describe Deciding TM closure under Concatenation",
+        "response" : "Let L1 and L2 be decidable and TM m1 and M2 decide respectively. Build M to decide L1 ∘ L2 M = 'On input w 1. For every possible split of w int w1w2 2. Copy w1 to tape 2. rune M1 on tape 1 Copy w2 to tape 2. Run M2 on tape 2 3. If both accept, then accept. 4. If all ways tried without success, reject.'"
+    },
+
+    {
+        "instruction" : "Describe Deciding TM closure under Star",
+        "response" : "Let L be decidable and TM M decides it. Build M to decide L*. M = 'On input w: 1. Split w into n parts such that w = w1w2...wn in different ways. 2. Run M on Wi for i = 1,2... n 3. If < accepts each of these string Wi then accept 4. If all attempts fail then reject.'"
+    },
+
+    {
+        "instruction" : "Describe Deciding TM closure under Complementation.", 
+        "response" : "Let L be a decidable language and M be a TM that decides it Build TM M' to decide L'. M' = 'On input w: 1. Run M on w 2. If M accpets, then reject 3. If M rejects, then accept.'"
+    },
+    
+    {
+        "instruction" : "Describe NDTM closure under Union", 
+        "response" : "Let L1 and L2 be recognizable and TM M1 and M2 recognize. Build TM M to recoginze L1 ⋃ L2: M = 'On inpout w 1. Copy w to tape 2. Run M1 on w using tape 1 and M2 on w using Tape 2 (Run in parallel) 3. If M1 or M2 accepts, then accept. 4. If both reject, then reject.'"
+    },
+
+    {
+        "instruction" : "Describe NDTM closure under Star",
+        "response" : "Let L be a T-recog language and M be the TM that recognizes. Build TM to recognize L*. M = 'On input w 1. Non-deterministically split w int w1, w2 ... wn 2. run M on each wi 3. If all wi are accepted, then accept. 4 if any wi is rejected, then reject.'"
+    },
+
+    {
+        "instruction" : "Describe NDTM closure under intersection",
+        "response" : "Let L1 and L2 be recoginzable and TM M1 and M2 recognize. Build TM M to recognize L1 ∩ L2: M = 'On input w 1. Copy w to tape 2. Run M1 on w using tape 1 2. If M1 rejects, then reject 3. Run M2 on w using tape 2 4. If M2 accepts, then accpet 5. if M1 or M2 rejects then reject.'"
+    },
+
+    {
+        "instruction" : "Describe NDTM closure under Concatenation", 
+        "response" : "Let L1 and L2 be recognizable and TM M! and M2 recoginize. Build TM M to recognize L1 ∘ L2: M = 'On Inut w 1. non deterministically divide w int w1w2 2. Run M1 on w1 using tape 1, if M1 rejects, the reject 3. Run M2 on w2 using tape 2, If M2 accpets, then accpet. 4. If M2 rejects, then reject.'"
+    },
+
+    {
+        "instruction" : "How do you show something is a regular language?",
+        "response" : "1. Give a regular expression for it. 2. Give a DFA that recognizes it. 3. Use closure properties"
+    },
+
+    {
+        "instruction" : "How do you show something is context free?",
+        "response" : "1. Give a CFG for it 2. Make a PDA."
+    },
+    
+    {
+        "instruction" : "How do you show something is decidable?",
+        "responese" : "1. Give a TM that decides it 2. Use closure properties 3. Give an algorithim for it."
+    },
+
+    {
+        "instruction" : "State the Churh-Turing Thesis",
+        "responese" : "Any turing maching that halts on all inputs can be considered an algorithim, and any algorithim can be rendered as a turing machine that halts on all inputs"
+    },
+
+    {
+        "instruction" : "State Cook-Levin Theorem",
+        "responese" : "The Boolean satisfiability problem (SAT) is NP-complete. That is, any problem in NP can be reduced in polynomial time by a deterministic Turing Machine to the problem of dettermining whether a Boolean formula is satisfiable."
     }
 ]
